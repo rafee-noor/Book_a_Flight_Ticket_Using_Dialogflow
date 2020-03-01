@@ -48,7 +48,7 @@ def webhook():
 def send_message():
     print("send message function is called")
     message = request.form['message']
-    project_id = "travel-shhmkj"
+    project_id = "PROJECT_ID"
     fulfillment_text = detect_intent_texts(project_id, "unique", message, 'en')
     response_text = { "message":  fulfillment_text }
     return jsonify(response_text)
